@@ -21,10 +21,7 @@
 
         #main       { width: 960px; height: 500px;
                       display: inline-block ; }
-            ul {
-                list-style: none;
-            }
-            #main > #tabMenu {
+            #main > #Menu {
                 background-color: chocolate;
                 width: 590px; height: 390px;
                 float: left;
@@ -33,6 +30,55 @@
                 padding-top: 10px;
             }
 
+            #tabMenu {
+                float: left;
+                width: 400px; --height: 100%;
+            }
+                #tabMenu input[type="radio"] {
+                    display:none; /* 라디오 버튼 숨김 */
+                }
+                #tabMenu label { /* 탭 메뉴 제목 */
+                    display: inline-block; /* 가로 배치 */
+                    padding: 15px 25px;
+                    font-weight: 600;
+                    text-align: center;
+                    color: aliceblue;
+                }
+                    #tabMenu label:hover {
+                        color: #222;
+                        cursor: pointer;
+                    }
+                    /* 선택된 탭 메뉴 제목 */
+                    #tabMenu input:checked + label {
+                        color: #b00;
+                        border: 1px solid #ddd;
+                        background-color: #eee;
+                    }
+                    .tabContent { /* 탭 내용 스타일 */
+                        display: none;
+                        /* 탭 내용 위에 가로선 */
+                        border-top: 1px solid #ddd;
+                    }
+                    #tabMenu > ul > li {
+                        font-size: 16px;
+                        line-height: 2.5;
+                    }
+                    #menu1 > ul > li {
+                        display: inline; /* 이미지 가로 배치 */
+                    }
+                    #menu2 > ul > li {
+                        display: inline;
+                    }
+                    #menu3 > ul > li {
+                        display: inline;
+                    }
+                    /* 탭을 클릭하면 내용이 보이게 */
+                    #menu1:checked ~ #menu1,
+                    #menu2:checked ~ #menu2,
+                    #menu3:checked ~ #menu3 {
+                        display: block;
+                    }
+                    
             #sidebar {width: 360px; height: 390px;
                       float: right;
                       position: relative;
