@@ -10,15 +10,54 @@
 <body>
     <div id="page">
         <div id="header">
-            <div class="logo">Title</div>
-            <div class="nav"><h3>한국어 ENG CHN</h3></div>
+            <div class="logo"><a href="#">Title</a></div>
+            <div class="nav">
+                <h3>
+                    <a href="#">한국어</a>
+                    <a href="#">ENG</a>
+                    <a href="#">CHN</a>
+                </h3>
+            </div>
         </div>
 
         <div id="main">
-            <div id="tabMenu">
-                <div class="menu1"><li><a href="#">메뉴 1</a></li></div>
-                <div class="menu2"><li><a href="#">메뉴 2</a></li></div>
-                <div class="menu3"><li><a href="#">메뉴 3</a></li></div>
+            <!-- 전체 메뉴를 div로 묶음 -->
+            <div id="Menu">
+                <div id="tabMenu">
+                    <input type="radio" id="menu1" name="tabs" checked>
+                    <label for="menu1">식사</label>
+
+                    <input type="radio" id="menu2" name="tabs">
+                    <label for="menu2">과일</label>
+
+                    <input type="radio" id="menu3" name="tabs">
+                    <label for="menu3">디저트</label>
+
+                    <!-- 탭 메뉴의 내용 부분 -->
+                    <div id="menu1" class="tabContent">
+                        <ul>
+                            <li><img src="/mission/img/menu1/mainfood1.jpg" width="60px">런치세트</li>
+                            <li><img src="/mission/img/menu1/mainfood2.jpg" width="60px">생선구이</li>
+                            <li><img src="/mission/img/menu1/mainfood3.jpg" width="60px">계란볶음밥</li>
+                        </ul>
+                    </div>
+
+                    <div id="menu2" class="tabContent">
+                        <ul>
+                            <li><img src="/mission/img/menu2/banana.jpg" width="60px">바나나</li>
+                            <li><img src="/mission/img/menu2/grape.jpg" width="60px">포도</li>
+                            <li><img src="/mission/img/menu2/orange.jpg" width="60px">오렌지</li>
+                        </ul>
+                    </div>
+
+                    <div id="menu3" class="tabContent">
+                        <ul>
+                            <li><img src="/mission/img/menu3/dessert1.jpg" width="60px">애프터눈 티</li>
+                            <li><img src="/mission/img/menu3/dessert2.jpg" width="60px">팝콘</li>
+                            <li><img src="/mission/img/menu3/dessert3.jpg" width="60px">조각케익</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <div id="sidebar">
